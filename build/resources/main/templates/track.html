@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/" class = "html">
+<head>
+    <link type="text/css" href="css/index.css" rel="stylesheet" />
+</head>
+<body class = "html">
+<div class="container">
+<video autoplay muted loop class="Background">
+    <source src="Background.mp4" type="video/mp4">
+</video>
+    <div class = "songoverlay">
+        <div class = "songbox">
+            <img height="500" width="500" th:src="@{${pic}}">
+            <span class = "titletext"><td th:text="${title}"></td></span>
+            <br>
+            <span class = "artisttext"><td th:text="${artist}"></td></span>
+            <br>
+            <span class = "songtext"><td th:text="${response}"></td></span>
+            <video controls name="media" class="preview">
+                <source th:src="@{${preview}}" type="audio/mpeg">
+            </video>
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>

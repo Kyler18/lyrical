@@ -1,0 +1,436 @@
+.Background {
+    position: fixed;
+    margin: 0;
+   }
+.container { position:relative; }
+.overlay {
+     background: rgba(0,0,0,0);
+     position: absolute;
+     top: 0; right: 0; bottom: 0; left: 0;
+     align-items: center;
+     justify-content: center;
+  }
+.h1 {
+    position: fixed;
+    color: white;
+    font-family: 'Nobile', sans-serif;
+    font-size: 9vw;
+    align-text: center;
+    top:8vw; right: 0; bottom: 0; left: 35vw;
+    text-shadow:
+    -.1vw -.1vw 0 #000,
+    .1vw -.1vw 0 #000,
+    -.1vw .1vw 0 #000,
+    .1vw .1vw 0 #000;
+  }
+
+
+.html {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin: 0;
+}
+.searchbox {
+    width: 29.9vw;
+    position: fixed;
+    height: 2.75vw;
+    align-text: center;
+    top: 25vw; right: 0; bottom: 0; left: 32.8vw;
+    font-size: 2vw;
+       text-align: center;
+}
+
+
+.search-submit {
+    position: fixed;
+    top: 25vw; right: 0; bottom: 0; left: 63.1vw;
+    height: 3.09vw;
+    width: 4vw;
+    display: inline-block;
+    background: #0E3B6D;
+    line-height: 54px;
+    border-radius: 0 5px 5px 0;
+}
+.searchicon {
+    position: fixed;
+    height: 5vw;
+    width: 5vw;
+    top: 24.1vw; right: 0; bottom: 0; left: 62.5vw;
+}
+.signinimage {
+    position: fixed;
+    height: 3vw;
+    width: 3vw;
+    top: 30.3vw; right: 0; bottom: 0; left: 45.9vw;
+}
+.signin {
+    position: fixed;
+    top: 30vw; right: 0; bottom: 0; left: 45.5vw;
+    height: 3.5vw;
+    width: 4vw;
+    display: inline-block;
+    background: #0E3B6D;
+    line-height: 54px;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Nobile', sans-serif;
+    font-size: 1.7vw;
+    align-text: center;
+}
+.signup {
+    position: fixed;
+    top: 30vw; right: 0; bottom: 0; left: 50.5vw;
+    height: 3.5vw;
+    width: 4vw;
+    display: inline-block;
+    background: #0E3B6D;
+    line-height: 54px;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Nobile', sans-serif;
+    font-size: 1.7vw;
+    align-text: right;
+}
+.signupimage {
+     position: fixed;
+     height: 3vw;
+     width: 3vw;
+     top: 30.3vw; right: 0; bottom: 0; left: 51vw;
+ }
+
+ .logouticon {
+     position: fixed;
+     height: 1.8vw;
+     width: 1.8vw;
+     top: 1.2vw; right: 0; bottom: 0; left: 97.2vw;
+ }
+ .logout {
+     position: fixed;
+     top: 1vw; right: 0; bottom: 0; left: 97vw;
+     height: 2.2vw;
+     width: 2.2vw;
+     display: inline-block;
+     background: #0E3B6D;
+     line-height: 54px;
+     border-radius: 5px;
+     color: white;
+     font-family: 'Nobile', sans-serif;
+     font-size: 1.7vw;
+     align-text: center;
+ }
+ .logouttooltip {
+   position: relative;
+   display: inline-block;
+ }
+ .logouttooltip .logouttooltiptext {
+   visibility: hidden;
+   width: 6vw;
+   height: 1vw;
+   background-color: black;
+   color: #fff;
+   text-align: center;
+   padding: 5px 0;
+   border-radius: 6px;
+   position: fixed;
+   z-index: 1;
+   top: 3.5vw; right: 0; bottom: 0; left: 95vw;
+ }
+ .logouttooltip:hover .logouttooltiptext {
+   visibility: visible;
+ }
+a:link {
+  text-decoration: none;
+}
+.signintooltip {
+  position: relative;
+  display: inline-block;
+}
+.signintooltip .signintooltiptext {
+  visibility: hidden;
+  width: 6vw;
+  height: 1vw;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: fixed;
+  z-index: 1;
+  top: 34vw; right: 0; bottom: 0; left: 44.3vw;
+}
+.signintooltip:hover .signintooltiptext {
+  visibility: visible;
+}
+
+.signuptooltip {
+  position: relative;
+  display: inline-block;
+}
+.signuptooltip .signuptooltiptext {
+  visibility: hidden;
+  width: 6vw;
+  height: 1vw;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: fixed;
+  z-index: 1;
+  top: 34vw; right: 0; bottom: 0; left: 49.5vw;
+}
+.signuptooltip:hover .signuptooltiptext {
+  visibility: visible;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 12vw; right: 40; bottom: 22; left: 43.5vw;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  border-radius: 6px;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 10vw;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #0E3B6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  border-radius: 6px;
+}
+
+.exit {
+  padding-left: 10.5vw;
+  height: 1vw;
+  width: 1vw;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+.spantext{
+    position: fixed;
+        color: white;
+        font-family: 'Nobile', sans-serif;
+        font-size: 2vw;
+        align-text: center;
+        top:8vw; right: 0; bottom: 0; left: 35vw;
+
+}
+.spantext1{
+    position: fixed;
+        color: white;
+        font-family: 'Nobile', sans-serif;
+        font-size: 2vw;
+        align-text: center;
+        top:10vw; right: 0; bottom: 0; left: 35vw;
+}
+.resultsbox{
+        border: 3px solid #f1f1f1;
+        max-width: 40vw;
+        background: white;
+        overflow: hidden;
+        height: 5.3vw;
+}
+
+.searchoverlay {
+     background: white;
+     position: absolute;
+     top: 20vw; right: 0; bottom: 0; left: 31vw;
+     align-items: center;
+     justify-content: center;
+     border-spacing: 3vw;
+  }
+  .resultsheader {
+      position: absolute;
+      color: white;
+      font-family: 'Nobile', sans-serif;
+      font-size: 3vw;
+      align-text: center;
+      top:5vw; right: 0; bottom: 0; left: 41vw;
+      text-shadow:
+      -.1vw -.1vw 0 #000,
+      .1vw -.1vw 0 #000,
+      -.1vw .1vw 0 #000,
+      .1vw .1vw 0 #000;
+    }
+    .searchterm {
+          position: absolute;
+          color: white;
+          font-family: 'Nobile', sans-serif;
+          font-size: 3vw;
+          align-text: center;
+          top:10vw; right: 0; bottom: 0; left: 46vw;
+          text-shadow:
+          -.1vw -.1vw 0 #000,
+          .1vw -.1vw 0 #000,
+          -.1vw .1vw 0 #000,
+          .1vw .1vw 0 #000;
+        }
+.resultstext {
+    color: black;
+    font-family: 'Nobile', sans-serif;
+    font-size: 1.3vw;
+    padding-left: .5vw;
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    bottom: 3.5vw;
+}
+.resultstext2 {
+    color: black;
+    font-family: 'Nobile', sans-serif;
+    font-size: 1vw;
+    padding-left: 6vw;
+    position: relative;
+    text-align: center;
+    bottom: 3.2vw;
+}
+
+.recentbox{
+        border: 3px solid #f1f1f1;
+        max-width: 8vw;
+        background: white;
+        padding: 1vw 1vw 1vw 1vw;
+        overflow: hidden;
+        margin-top: .5vw;
+        top:10vw; right: 0; bottom: 0; left: 3vw;
+        position: absolute;
+        height: 5vw;
+}
+.recenttext {
+    color: black;
+    font-family: 'Nobile', sans-serif;
+    font-size: .8vw;
+
+}
+.searchbox-results {
+    width: 29.9vw;
+    position: absolute;
+    height: 2.75vw;
+    align-text: center;
+    top: 15vw; right: 0; bottom: 0; left: 33.8vw;
+    font-size: 2vw;
+       text-align: center;
+}
+
+
+.search-submit-results {
+    position: absolute;
+    top: 15vw; right: 0; bottom: 0; left: 64.1vw;
+    height: 3.09vw;
+    width: 4vw;
+    display: inline-block;
+    background: #0E3B6D;
+    line-height: 54px;
+    border-radius: 0 5px 5px 0;
+}
+.songoverlay {
+     background: white;
+     position: absolute;
+     top: 10vw; right: 0; bottom: 0; left: 20vw;
+     align-items: center;
+     justify-content: center;
+     border-spacing: 3vw;
+  }
+
+  .songtext {
+      color: black;
+          font-family: 'Nobile', sans-serif;
+          font-size: .85vw;
+          padding-left: 30vw;
+          position: relative;
+          text-align: center;
+          word-wrap: break-word;
+          display: block;
+          max-width: 25vw;
+          max-height: 40vw;
+          bottom: 25vw;
+  }
+   .titletext {
+        color: black;
+            font-family: 'Nobile', sans-serif;
+            font-size: 1.2vw;
+            padding-left: 30vw;
+            position: relative;
+            text-align: center;
+            word-wrap: break-word;
+            display: block;
+            max-width: 25vw;
+            max-height: 40vw;
+            bottom: 25vw;
+            font-weight: bold;
+    }
+    .artisttext {
+           color: black;
+               font-family: 'Nobile', sans-serif;
+               font-size: 1vw;
+               padding-left: 30vw;
+               position: relative;
+               text-align: center;
+               word-wrap: break-word;
+               display: block;
+               max-width: 25vw;
+               max-height: 40vw;
+               bottom: 25vw;
+       }
+
+
+.lyrics-submit {
+    position: relative;
+    height: 5.3vw;
+    width: 40vw;
+    display: inline-block;
+    background: #0E3B6D;
+    line-height: 54px;
+    bottom: 6.8vw;
+    opacity: 0%;
+}
+.songbox{
+        border: 3px solid #f1f1f1;
+        max-width: 60vw;
+        background: white;
+        height: 26vw;
+}
+
+.preview{
+          position: fixed;
+          display: block;
+          bottom: 14.3vw; left:58vw;
+          max-width: 15vw;
+          max-height: 5vw;
+}

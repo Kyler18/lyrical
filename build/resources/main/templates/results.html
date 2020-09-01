@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/" class = "html">
+<head>
+    <link type="text/css" href="css/index.css" rel="stylesheet" />
+</head>
+<body class = "html">
+<div class="container">
+<video autoplay muted loop class="Background">
+    <source src="Background.mp4" type="video/mp4">
+</video>
+    <form th:action="@{/results}" method = "post">
+        <input maxlength="100" minlength="3" autocomplete="off" class="searchbox-results" placeholder="Enter a song or artist" type="text" name="searchTerm" id="searchTerm" required>
+        <input type="image" name="submit" src="search.png" class = "search-submit-results"/>
+    </form>
+    <h1 class = "resultsheader">Results for: </h1>
+    <div class = "searchterm">
+    "<td th:text="${searchterm}"></td>"
+    </div>
+
+    <div class = "searchoverlay">
+        <tr th:each="hit : ${hits}">
+            <div class = "resultsbox">
+                <form th:action="@{/track}" method = "post">
+                    <img height="100" width="100" th:src="@{${hit.smallPicture}}">
+                    <input type = "hidden"  th:value= "${hit.title}" name="songName"><span class = "resultstext"><td th:text="${hit.title}"></td></span>
+                            <br>
+                    <input type = "hidden" th:value = "${hit.artist}" name="artistName"><span class = "resultstext2"><td th:text="${hit.artist}"></td></span>
+                    <input type="image" name="submit" src="search.png" class = "lyrics-submit"/>
+                    <input type = "hidden" th:value = "${hit.largePicture}" name="largePicture">
+                    <input type = "hidden" th:value = "${hit.preview}" name="preview">
+                </form>
+            </div>
+        </tr>
+    </div>
+
+
+
+    <div class="logouttooltip">
+        <a href="/logout" class = "logout"><img border="0" alt="Logout" src='logout.png' class = "logouticon"></a>
+        <span class="logouttooltiptext">Log out here!</span>
+    </div>
+
+
+</div>
+</body>
+</html>

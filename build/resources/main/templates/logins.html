@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/" class = "html">
+<head>
+    <link type="text/css" href="css/index.css" rel="stylesheet" />
+</head>
+<body class = "html">
+<div class="container">
+<video autoplay muted loop class="Background">
+    <source src="Background.mp4" type="video/mp4">
+</video>
+    <div class="overlay">
+    <span class ="spantext">Login Successful!</span>
+    <span class ="spantext1">Web page will redirect after 5 seconds.</span>
+    </div>
+<script>
+         setTimeout(function(){
+            window.location.href = 'http://localhost:8080/index';
+         }, 5000);
+</script>
+
+</div>
+</body>
+</html>
