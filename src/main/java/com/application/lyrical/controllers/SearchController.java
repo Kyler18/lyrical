@@ -36,7 +36,7 @@ public class SearchController {
                 URLEncoder.encode(searchTerm, charset));
         
         // Json response
-        HttpResponse<JsonNode> response = Unirest.get(apiresults.getGeniusUrl() + "?" + query + "&limit=500")
+        HttpResponse<JsonNode> response = Unirest.get(apiresults.getDeezerUrl() + "?" + query + "&limit=500")
                 .header(apiresults.getHostName(), apiresults.getHostValue())
                 .header(apiresults.getApiKeyName(), apiresults.getApiKeyValue())
                 .asJson();
@@ -60,9 +60,7 @@ public class SearchController {
             songData.setSmallPicture(pic1);
             String pic2 = artist.getString("picture_xl");
             songData.setLargePicture(pic2);
-
             songs.add(songData);
-
         }
 
         model.addAttribute("hits", songs);

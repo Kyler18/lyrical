@@ -7,25 +7,26 @@ import java.io.UnsupportedEncodingException;
 
 @Component
 public class Search {
-    @Value("${rapidapi.genius.url}")
-    private String geniusUrl;
+    @Value("${rapidapi.deezer.url}")
+    private String deezerUrl;
     @Value("${rapidapi.key.name}")
     private String apiKeyName;
     @Value("${rapidapi.key.value}")
     private String apiKeyValue;
     @Value("${rapidapi.host.name}")
     private String hostName;
-    @Value("${rapidapi.host.genius.value}")
+    @Value("${rapidapi.host.deezer.value}")
     private String hostValue;
 
     public Search() throws UnsupportedEncodingException {
     }
-    public String getGeniusUrl() {
-        return geniusUrl;
+
+    public String getDeezerUrl() {
+        return deezerUrl;
     }
 
-    public void setGeniusUrl(String geniusUrl) {
-        this.geniusUrl = geniusUrl;
+    public void setDeezerUrl(String deezerUrl) {
+        this.deezerUrl = deezerUrl;
     }
 
     public String getApiKeyName() {
