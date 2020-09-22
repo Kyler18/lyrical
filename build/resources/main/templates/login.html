@@ -27,13 +27,13 @@
 
                 <label th:for="username"><b>Username</b></label>
                 <div>
-                    <input type ="text" th:field="${loginFormDTO.username}" placeholder="Enter Username"  id="loginuser" required >
+                    <input minlength="3" type ="text" th:field="${loginFormDTO.username}" placeholder="Enter Username"  id="loginuser" required >
                     <p class="error" th:errors="${loginFormDTO.username}"></p>
                 </div>
 
                 <label th:for="password"><b>Password</b></label>
                 <div>
-                    <input th:field="${loginFormDTO.password}"type="password" placeholder="Enter Password" id ="loginpass"required>
+                    <input minlength="3" th:field="${loginFormDTO.password}"type="password" placeholder="Enter Password" id ="loginpass"required>
                     <p class="errorp" th:errors="${loginFormDTO.password}"></p>
                 </div>
                 <button class="btn" onclick="sendLoginForm()">Login</button>
@@ -41,7 +41,7 @@
         </div>
 
         <div class="signuptooltip">
-            <a href = "/register" class = "signup"><img border="0" alt="Sign-Up" src="signup.png" class = "signupimage"></a>
+            <a href = "/register" minlength="3" class = "signup"><img border="0" alt="Sign-Up" src="signup.png" class = "signupimage"></a>
             <span class="signuptooltiptext">Sign up here!</span>
         </div>
 
