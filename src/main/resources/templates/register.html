@@ -4,6 +4,7 @@
     <link type="text/css" href="css/index.css" rel="stylesheet" />
 </head>
 <body class = "html">
+<div th:replace="fragments :: page-header"></div>
 <div class="container">
     <video autoplay muted loop class="Background">
         <source src="Background.mp4" type="video/mp4">
@@ -14,22 +15,6 @@
             <input maxlength="100" minlength="3" autocomplete="off" class="searchbox" placeholder="Enter a song or artist" type="text" name="searchTerm" id="searchTerm" required>
             <input type="image" name="submit" src="search.png" class = "search-submit"/>
         </form>
-
-        <div class="signintooltip">
-            <a href="/login" class = "signin"><img border="0" alt="Sign-In" src="log-in.png" class = "signinimage"></a>
-            <span class="signintooltiptext">Log in here!</span>
-        </div>
-
-        <div class="signuptooltip">
-            <a href = "/register" class = "signup"><img border="0" alt="Sign-Up" src="signup.png" class = "signupimage"></a>
-            <span class="signuptooltiptext">Sign up here!</span>
-        </div>
-
-        <div class="logouttooltip">
-            <a href="/logout" class = "logout"><img border="0" alt="Logout" src='logout.png' class = "logouticon"></a>
-            <span class="logouttooltiptext">Log out here!</span>
-        </div>
-
                 <div class="form-popup" id="myForm">
                     <form method="post" class="form-container">
                         <img border="0" src="exit.png" onclick="closeForm()" class = "exit"><h1>Register</h1>
@@ -52,7 +37,6 @@
                             <p class="errorp" th:errors="${registerFormDTO.verifyPassword}"></p>
                         </div>
                         <button type="submit" class="btn">Register</button>
-
         </form>
     </div>
 </div>
