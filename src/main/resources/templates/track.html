@@ -4,11 +4,11 @@
     <link type="text/css" href="css/index.css" rel="stylesheet" />
 </head>
 <body class = "html">
-<div th:replace="fragments :: page-header"></div>
 <div class="container">
 <video autoplay muted loop class="Background">
     <source src="Background.mp4" type="video/mp4">
 </video>
+    <div th:replace="fragments :: page-header"></div>
     <div class = "songoverlay">
         <div class = "songbox">
             <img height="500" width="500" th:src="@{${pic}}">

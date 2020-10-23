@@ -5,11 +5,11 @@
         <link rel="icon" href="icon.png">
     </head>
     <body class = "html">
-    <div th:replace="fragments :: page-header"></div>
         <div class="container">
             <video autoplay muted loop class="Background">
                 <source src="Background.mp4" type="video/mp4">
             </video>
+            <div th:replace="fragments :: page-header"></div>
             <div class="overlay">
                 <h1 class = "h1">Lyrical</h1>
                     <form th:action="@{/results}" method = "post">
