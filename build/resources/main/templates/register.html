@@ -23,13 +23,13 @@
 
                         <label th:for="username"><b>Username</b></label>
                         <div>
-                            <input type ="text" th:field="${registerFormDTO.username}" placeholder="Enter Username"  required>
+                            <input type ="text" th:field="${registerFormDTO.username}" placeholder="Enter Username" pattern="[A-Za-z0-9]" required>
                             <p class="error" th:errors="${registerFormDTO.username}"></p>
                         </div>
 
                         <label th:for="password"><b>Password</b></label>
                         <div>
-                            <input minlength="3" th:field="${registerFormDTO.password}" type="password" placeholder="Enter Password" required>
+                            <input minlength="3" th:field="${registerFormDTO.password}" type="password" placeholder="Enter Password" pattern="[A-Za-z0-9]" required>
                             <p class="errorp" th:errors="${registerFormDTO.password}"></p>
                         </div>
                         <label th:for="verifyPassword"><b>Verify Password</b></label>
