@@ -447,6 +447,8 @@ a:link {
   overflow: hidden;
   background-color: #000000;
   position: relative;
+  max-width: 8vw;
+  left: 92vw;
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */

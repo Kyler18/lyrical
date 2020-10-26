@@ -8,8 +8,8 @@
     <video autoplay muted loop class="Background">
         <source src="Background.mp4" type="video/mp4">
     </video>
-    <div th:replace="fragments :: page-header"></div>
     <div class="overlay">
+        <div th:replace="fragments :: page-header"></div>
         <h1 class = "h1">Lyrical</h1>
         <form th:action="@{/results}" method = "post">
             <input maxlength="100" minlength="3" autocomplete="off" class="searchbox" placeholder="Enter a song or artist" type="text" name="searchTerm" id="searchTerm" required>
@@ -29,15 +29,13 @@
 
                 <label th:for="password"><b>Password</b></label>
                 <div>
-                    <input minlength="3" th:field="${loginFormDTO.password}"type="password" placeholder="Enter Password" id ="loginpass"required>
+                    <input minlength="3" th:field="${loginFormDTO.password}" type="password" placeholder="Enter Password" id ="loginpass" required>
                     <p class="errorp" th:errors="${loginFormDTO.password}"></p>
                 </div>
                 <button class="btn" onclick="sendLoginForm()">Login</button>
             </form>
         </div>
-        </form>
     </div>
-</div>
 </div>
 <script>
 

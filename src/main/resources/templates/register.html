@@ -8,8 +8,9 @@
     <video autoplay muted loop class="Background">
         <source src="Background.mp4" type="video/mp4">
     </video>
-    <div th:replace="fragments :: page-header"></div>
+
     <div class="overlay">
+        <div th:replace="fragments :: page-header"></div>
         <h1 class = "h1">Lyrical</h1>
         <form th:action="@{/results}" method = "post">
             <input maxlength="100" minlength="3" autocomplete="off" class="searchbox" placeholder="Enter a song or artist" type="text" name="searchTerm" id="searchTerm" required>
@@ -28,12 +29,12 @@
 
                         <label th:for="password"><b>Password</b></label>
                         <div>
-                            <input minlength="3" th:field="${registerFormDTO.password}"type="password" placeholder="Enter Password" required>
+                            <input minlength="3" th:field="${registerFormDTO.password}" type="password" placeholder="Enter Password" required>
                             <p class="errorp" th:errors="${registerFormDTO.password}"></p>
                         </div>
                         <label th:for="verifyPassword"><b>Verify Password</b></label>
                         <div>
-                            <input minlength="3" th:field="${registerFormDTO.verifyPassword}"type="password" placeholder="Enter Password Again" required>
+                            <input minlength="3" th:field="${registerFormDTO.verifyPassword}" type="password" placeholder="Enter Password Again" required>
                             <p class="errorp" th:errors="${registerFormDTO.verifyPassword}"></p>
                         </div>
                         <button type="submit" class="btn">Register</button>
@@ -50,4 +51,4 @@ function closeForm() {
 
 </script>
 </body>
-</html></html>
+</html>
