@@ -1,6 +1,7 @@
 package com.application.lyrical.models.dto;
 
 import com.sun.istack.NotNull;
+
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 

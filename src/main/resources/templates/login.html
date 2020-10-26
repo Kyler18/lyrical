@@ -23,13 +23,13 @@
 
                 <label th:for="username"><b>Username</b></label>
                 <div>
-                    <input minlength="3" type ="text" th:field="${loginFormDTO.username}" placeholder="Enter Username"  id="loginuser" required >
+                    <input minlength="3" type ="text" th:field="${loginFormDTO.username}" placeholder="Enter Username - Alphanumeric only"  id="loginuser" pattern="[A-Za-z0-9]" required >
                     <p class="error" th:errors="${loginFormDTO.username}"></p>
                 </div>
 
                 <label th:for="password"><b>Password</b></label>
                 <div>
-                    <input minlength="3" th:field="${loginFormDTO.password}" type="password" placeholder="Enter Password" id ="loginpass" required>
+                    <input minlength="3" th:field="${loginFormDTO.password}" type="password" placeholder="Enter Password  - Alphanumeric only" id ="loginpass" pattern="[A-Za-z0-9]" required>
                     <p class="errorp" th:errors="${loginFormDTO.password}"></p>
                 </div>
                 <button class="btn" onclick="sendLoginForm()">Login</button>
