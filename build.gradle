@@ -6,8 +6,8 @@ plugins {
 
 group = 'com.application'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = JavaVersion.VERSION_14
-targetCompatibility = JavaVersion.VERSION_14
+sourceCompatibility = JavaVersion.VERSION_15
+targetCompatibility = JavaVersion.VERSION_15
 
 configurations {
 	developmentOnly
